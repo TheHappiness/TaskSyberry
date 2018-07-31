@@ -137,7 +137,7 @@ namespace GameOfLife
         }
 
         /// <summary>
-        /// Check the indices for existing ones and return them
+        /// To check the indices by Moore neighborhood and return if its exist
         /// </summary>
         /// <param name="row"></param>
         /// <param name="col"></param>
