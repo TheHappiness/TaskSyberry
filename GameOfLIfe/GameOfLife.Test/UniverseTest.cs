@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace GameOfLife.Test
@@ -100,6 +102,19 @@ namespace GameOfLife.Test
 
             // Assert
             Assert.True(Console.BackgroundColor == background);
+        }
+
+        [Theory]
+        [InlineData(10, 10, 3)]
+        [InlineData(40, 40, 10)]
+        [InlineData(40, 10, 5)]
+        public void CheckTheoryInitialize(int row, int col, int pop)
+        {
+            // Act
+            var universe = new Universe(row, col, pop);
+
+            // Assert
+            Assert.NotNull(universe);
         }
     }
 }
